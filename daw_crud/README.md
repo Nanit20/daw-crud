@@ -44,4 +44,4 @@ Para poder hacer uso de los elementos CRUD en nuestra aplicación, necesitaremos
 
 ## Comentarios extra
 
-No he sido capaz de montarlo en línea, al igual que en las prácticas anteriores en lo que es montarlo en línea no he sido capaz, sin embargo en local mediante el comando para ejecutarlo me funcionaba bien.
+No he sido capaz de montarlo en línea, al igual que en las prácticas anteriores en lo que es montarlo en línea no he sido capaz, sin embargo en local mediante el comando para ejecutarlo me funcionaba bien "--ng serve o".
