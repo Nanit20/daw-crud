@@ -41,3 +41,7 @@ Para terminar de implementar las funciones CRUD, crearemos los componentes 'show
 ## Enrutamiento y navegación
 
 Para poder hacer uso de los elementos CRUD en nuestra aplicación, necesitaremos configurar correctamente las rutas, para ello, haremos uso del routing de Angular mediante el archivo 'app-routing.module.ts'. A este archivo le importaremos nuestros componentes (show, create y edit) para los cuales configuraremos el path correcto para cada uno de los componentes. Una vez hecho esto, cada vez que queramos acceder a alguna de las páginas de nuestros componentes, deberemos hacer referencia al path del componente deseado mediante el uso de '<router-outlet></router-outlet>' en 'app.component.html'.
+
+## Comentarios extra
+
+No he sido capaz de montarlo en línea, al igual que en las prácticas anteriores en lo que es montarlo en línea no he sido capaz, sin embargo en local mediante el comando para ejecutarlo me funcionaba bien.
