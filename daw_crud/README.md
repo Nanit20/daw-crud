@@ -5,7 +5,7 @@ En este proyecto hemos realizado una aplicación en Angular con funciones CRUD h
 
 ## Preparación del proyecto
 
-Para poder comenzar, primero creamos un proyecto al que llamaríamos "daw_crud" mediante el comando 'ng new daw_crud' al que aceptamos el routing de Angular y archivos .CSS para el estilo y, además, nos creamos un proyecto en Firestore de Firebase el cual enlazaremos más adelante con nuestra app. A continuación, ejecutaremos el comando 'npm i bootstrap firebase @angular/fire' para instalar los paquetes necesarios:
+Para poder comenzar, primero creamos un proyecto al que llamaríamos "crud_daw" mediante el comando 'ng new crud_daw' al que aceptamos el routing de Angular y archivos .CSS para el estilo y, además, nos creamos un proyecto en Firestore de Firebase el cual enlazaremos más adelante con nuestra app. A continuación, ejecutaremos el comando 'npm i bootstrap firebase @angular/fire' para instalar los paquetes necesarios:
 
 - bootstrap para añadir estilos
 - firebase, instalación necesaria para poder usar Firebase
@@ -22,12 +22,12 @@ En 'app.module.ts' importaremos las clases necesarias para poder trabajar con Fi
 ## Implementación de servicios
 
 Según la documentación podemos llegar a la conclusión de que "un servicio es una clase que se encarga de acceder a los datos para servir a los componentes. Estos servicios se pueden reutilizar para distintos componentes."
-Una vez aclarado esto, hemos generado un servicio con el siguiente comando 'ng generate service post --skip-tests' generando un archivo llamado 'post.service.ts'. En este archivo importaremos los módulos para trabajar con Firestore y nuestro modelo. Además, crearemos y desarrollaremos los métodos que usaremos para nuestro CRUD, los cuales son
+Una vez aclarado esto, hemos generado un servicio con el siguiente comando 'ng generate service post --skip-tests' generando un archivo llamado 'post.service.ts'. En este archivo importaremos los módulos para trabajar con Firestore y nuestro modelo ('Post' en nuestro caso). Además, crearemos y desarrollaremos los métodos que usaremos para nuestro CRUD, los cuales son
 - getPosts(): nos devolverá todos los documentos.
 - getPostById(): nos devolverá un único elemento.
 - createPost(): creará un elemento.
-- deletePost(): eliminará un elemento.
 - updatePost(): actualizará un elemento.
+- deletePost(): eliminará un elemento
 
 
 ## Elementos CRUD
@@ -40,8 +40,4 @@ Para terminar de implementar las funciones CRUD, crearemos los componentes 'show
 
 ## Enrutamiento y navegación
 
-Para poder hacer uso de los elementos CRUD en nuestra aplicación, necesitaremos configurar correctamente las rutas, para ello, haremos uso del routing de Angular mediante el archivo 'app-routing.module.ts'. A este archivo le importaremos nuestros componentes (show, create y edit) para los cuales configuraremos el path correcto para cada uno de los componentes. Una vez hecho esto, cada vez que queramos acceder a alguna de las páginas de nuestros componentes, deberemos hacer referencia al path del componente deseado mediante el uso de '<router-outlet></router-outlet>' en 'app.component.html'.
-
-## Comentarios extra
-
-No he sido capaz de montarlo en línea, al igual que en las prácticas anteriores en lo que es montarlo en línea no he sido capaz, sin embargo en local mediante el comando para ejecutarlo me funcionaba bien "--ng serve o".
+Para poder hacer uso de los elementos CRUD en nuestra aplicación, necesitaremos configurar correctamente las rutas, para ello, haremos uso del routing de Angular mediante el archivo 'app-routing.module.ts'. A este archivo le importaremos nuestros componentes (show, create y edit) para los cuales configuraremos el path correcto para cada uno de los componentes. Una vez hecho esto, cada vez que queramos acceder a alguna de las páginas de nuestros componentes, deberemos hacer referencia al path del componente deseado mediante el uso de '<router-outlet></router-outlet>' en 'app.component.html' (la página principal de nuestra app, y 'routerLink' para movernos entre páginas
